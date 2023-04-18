@@ -6,7 +6,7 @@
 
     <context:component-scan base-package="org.zerock.springex.sample"/>
 
-<!--    <bean class="org.zerock.springex.sample.SampleDAO"></bean>-->
+<!--    <bean class="org.zerock.springex.sample.SampleDAOImpl"></bean>-->
 <!--    &lt;!&ndash; SampleDAO 클래스를 bean에 등록   &ndash;&gt;-->
 <!--    <bean class="org.zerock.springex.sample.SampleService"></bean>-->
 <!--    &lt;!&ndash; SampleService 클래스를 bean에 등록 &ndash;&gt;-->

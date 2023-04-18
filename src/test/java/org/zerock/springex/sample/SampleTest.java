@@ -15,6 +15,7 @@ public class SampleTest {
 
     @Autowired // 의존성 주입 관련 어노테이션; 해당 타입의 빈(Bean)이 존재하면 여기에 주입하라는 의미
     private SampleService sampleService;
+    // 필드 주입(Field Injection) : 멤버 변수에 직접 @Autowired를 선언하는 방식
 
     @Test
     public void testService1() {

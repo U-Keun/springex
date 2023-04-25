@@ -11,7 +11,7 @@ import org.zerock.springex.mapper.TodoMapper;
 @Service
 @Log4j2
 @RequiredArgsConstructor
-public class TodoServiceImpl {
+public class TodoServiceImpl implements TodoService {
 
     private final TodoMapper todoMapper;
 

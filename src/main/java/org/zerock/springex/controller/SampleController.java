@@ -2,8 +2,11 @@ package org.zerock.springex.controller;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.zerock.springex.dto.TodoDTO;
 
 import java.time.LocalDate;
 
@@ -35,5 +38,19 @@ public class SampleController {
     public void ex3(LocalDate dueDate) {
         log.info("ex3..........");
         log.info("dueDate: " + dueDate);
+    }
+
+    @GetMapping("/ex4")
+    public void ex4(Model model) {
+
+        log.info("---------------------");
+        model.addAttribute("message", "Hello World");
+    }
+
+    @GetMapping("/ex4_1")
+    public void ex4_1(@ModelAttribute("dto") TodoDTO todoDTO, Model model) {
+        // @ModelAttribute : JSP에서는 ${dto}와 같은 이름의 변수로 처리할 수 있다.
+        log.info(todoDTO);
+
     }
 }

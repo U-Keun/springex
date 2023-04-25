@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import org.zerock.springex.dto.TodoDTO;
 
 import java.time.LocalDate;
@@ -51,6 +52,21 @@ public class SampleController {
     public void ex4_1(@ModelAttribute("dto") TodoDTO todoDTO, Model model) {
         // @ModelAttribute : JSP에서는 ${dto}와 같은 이름의 변수로 처리할 수 있다.
         log.info(todoDTO);
+    }
+
+    @GetMapping("/ex5")
+    public String ex5(RedirectAttributes redirectAttributes) {
+        // name이라는 이름의 데이터를 전달
+        redirectAttributes.addAttribute("name", "ABC");
+        // result라는 이름의 데이터를 전달하고 삭제
+        redirectAttributes.addFlashAttribute("result", "success");
+
+        // /ex6 경로를 호출 -> /ex5에 해당하는 JSP는 필요하지 않음.
+        return "redirect:/ex6";
+    }
+
+    @GetMapping("/ex6")
+    public void ex6() {
 
     }
 }

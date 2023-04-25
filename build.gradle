@@ -39,6 +39,10 @@ dependencies {
 
     implementation group: 'org.springframework', name: 'spring-tx', version: '5.3.19'
 
+    implementation group: 'org.modelmapper', name: 'modelmapper', version: '3.0.0'
+
+    implementation group: 'org.hibernate', name: 'hibernate-validator', version: '6.2.1.Final'
+
     compileOnly 'org.projectlombok:lombok:1.18.24'
     annotationProcessor 'org.projectlombok:lombok:1.18.24'
 

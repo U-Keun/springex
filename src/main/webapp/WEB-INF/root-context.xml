@@ -9,13 +9,6 @@
        http://www.springframework.org/schema/context/spring-context.xsd
        http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd">
 
-    <context:component-scan base-package="org.zerock.springex.sample"></context:component-scan>
-
-<!--    <bean class="org.zerock.springex.sample.SampleDAOImpl"></bean>-->
-<!--    &lt;!&ndash; SampleDAO 클래스를 bean에 등록   &ndash;&gt;-->
-<!--    <bean class="org.zerock.springex.sample.SampleService"></bean>-->
-<!--    &lt;!&ndash; SampleService 클래스를 bean에 등록 &ndash;&gt;-->
-
     <bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
         <property name="driverClassName" value="org.mariadb.jdbc.Driver"></property>
         <property name="jdbcUrl" value="jdbc:mariadb://localhost:3306/webdb"></property>

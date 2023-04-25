@@ -13,11 +13,11 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 public class TimeMapperTests {
 
     @Autowired(required = false) // 해당 객체를 주입 받지 못하더라도 예외가 발생하지 않음.
-    private TimeMapper timeMapper;
+    private TimeMapper2 timeMapper2;
 
     @Test
     public void testGetTime() {
 
-        log.info(timeMapper.getTime());
+        log.info(timeMapper2.getNow());
     }
 }
